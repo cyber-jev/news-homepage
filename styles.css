@@ -8,12 +8,14 @@
 }
 
 body {
+	max-width: 1000px;
 	font-family: "Open Sans", sans-serif;
 	color: hsl(236, 13%, 42%);
 	line-height: 1.5;
 	font-size: 0.875rem;
-	margin-left: 2em;
-	margin-right: 2em;
+	padding: 2em;
+	/* padding-right: 2em; */
+	margin: 0 auto;
 }
 
 ul,
@@ -228,12 +230,12 @@ img {
 	margin-bottom: 3em;
 }
 
-.footer-element {
+/* .footer-element {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-top: 3em;
-}
+} */
 .footer-child_element {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -257,8 +259,10 @@ img {
 /* ! Desktop Design */
 @media screen and (min-width: 800px) {
 	body {
-		max-width: 1440px;
-		margin: 0 auto;
+		/* max-width: 1440px; */
+		/* margin: 0 auto; */
+		padding-left: 3em;
+		padding-right: 3em;
 	}
 
 	.main-grid {
@@ -266,6 +270,13 @@ img {
 			"one one four"
 			"two three four"
 			"five five five";
+	}
+
+	.footer-element {
+		display: grid;
+		gap: 1em;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		margin-top: 3em;
 	}
 
 	.logo-img {
